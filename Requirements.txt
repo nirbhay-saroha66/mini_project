@@ -1,0 +1,39 @@
+Requirements for running the mini project:
+
+1)Python Version
+Python 3.7 or higher (recommended 3.8+)
+
+2)Core Dependencies
+pandas>=1.0.0
+numpy>=1.18.0
+scikit-learn>=0.24.0
+xgboost>=1.3.0
+lightgbm>=3.0.0
+imbalanced-learn>=0.8.0
+matplotlib>=3.0.0
+scipy>=1.5.0
+
+3)Create a virtual environment and install the requirements:
+python -m venv fs_env
+source fs_env/bin/activate  # On Windows use `fs_env\Scripts\activate`
+
+pip install pandas numpy scikit-learn xgboost lightgbm imbalanced-learn matplotlib scipy
+
+
+4)Optional Dependencies
+For better performance: pip install joblib threadpoolctl
+
+5)Data Requirements
+The code expects two CSV files:
+kdd_train.csv (training data)
+kdd_test.csv (testing data)
+
+6)The datasets must contain these specific columns:
+Three categorical features: protocol_type, service, flag
+A label column: labels
+Various numerical features
+
+7)Hardware Recommendations
+Minimum: 8GB RAM
+Recommended: 16GB+ RAM (especially for larger datasets)
+Multi-core CPU recommended (the code uses parallel processing via n_jobs=-1)
